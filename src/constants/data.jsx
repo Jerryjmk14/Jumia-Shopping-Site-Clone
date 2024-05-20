@@ -34,6 +34,9 @@ import sales9 from "../assets/images/flashsales/flashsales9.png";
 import sales10 from "../assets/images/flashsales/flashsales10.png";
 import sales11 from "../assets/images/flashsales/flashsales11.png";
 import sales12 from "../assets/images/flashsales/flashsales12.png";
+import picAside1 from "../assets/images/article1imgone.jpg";
+import picAside2 from "../assets/images/article1imgtwo.jpg";
+import picAside3 from "../assets/images/article1imgthree.jpg";
 
 export const allPictures = [
   {
@@ -50,7 +53,7 @@ export const allPictures = [
   },
   {
     id: 2,
-    category: "fashion wears",
+    category: "Fashion Wears",
     data: [
       { name: "women's wears", pic: fashion1 },
       { name: "kiddies", pic: fashion2 },
@@ -127,4 +130,15 @@ export const asideData = [
   { icon: <IoGameControllerOutline />, iconText: "Gaming" },
   { icon: <GiWeightLiftingUp />, iconText: "Sporting Goods" },
   { icon: <CiCircleMore />, iconText: "Other Categories" },
+];
+
+export const asideTwoData = [
+  {
+    id: 1,
+    icon: picAside1,
+    iconText: "Call To Order",
+    iconText2: "0700 600 0000",
+  },
+  { id: 2, icon: picAside3, iconText: "Sell on Jumia" },
+  { id: 3, icon: picAside3, iconText: "Best Deals" },
 ];

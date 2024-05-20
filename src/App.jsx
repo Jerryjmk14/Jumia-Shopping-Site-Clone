@@ -12,16 +12,14 @@ import { CiUser } from "react-icons/ci";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FaChevronUp } from "react-icons/fa";
-import Carousel from "./components/Carousel";
-import carousel from "./assets/images/carousel1.png";
 import article2 from "./assets/images/article2.png";
-import articleimg1 from "./assets/images/article1imgone.jpg";
-import articleimg2 from "./assets/images/article1imgtwo.jpg";
-import articleimg3 from "./assets/images/article1imgthree.jpg";
 import Aside from "./components/Aside";
 import { allPictures } from "./constants/data";
 import Main from "./components/Main";
 import { clearanceSales } from "./constants/data";
+import Footer from "./components/Footer";
+import AsideTwo from "./components/AsideTwo";
+import Carousel from "./components/Carousel";
 
 export default function App() {
   return (
@@ -81,37 +79,24 @@ export default function App() {
         <aside className="aside">
           <Aside />
         </aside>
-        <Carousel>
-          <img src={carousel} />
-        </Carousel>
+
+        <Carousel />
+
         <article className="article-one">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img src={articleimg1} alt="article1" style={{ width: "30px" }} />
-            <span>
-              CALL TO ORDER
-              <br />
-              0700 600 000
-            </span>
-          </div>
-          <div>
-            <img src={articleimg2} alt="article2" style={{ width: "30px" }} />
-            <span>Sell on Jumia</span>
-          </div>
-          <div>
-            <img src={articleimg3} alt="article3" style={{ width: "30px" }} />
-            <span>Best Deals</span>
-          </div>
+          <AsideTwo />
         </article>
+
         <article className="article-two">
           <img src={article2} alt="article2" />
         </article>
       </header>
 
+      {/* This is the main body */}
       <main className="main-body">
         <div className="flashsales">
           {clearanceSales.map(({ pic, id, name }) => {
             return (
-              <div key={id}>
+              <div key={id} style={{ width: "15%", margin: "0 auto" }}>
                 <img src={pic} alt={name} />
                 <p>{name}</p>
               </div>
@@ -123,6 +108,20 @@ export default function App() {
           return <Main key={id} category={category} data={data} />;
         })}
       </main>
+
+      {/* This is the Footer */}
+      <footer className="footer">
+        <section className="footer-dark">
+          <Logo src={logo} alt="logo" width="160px" color="white" />
+          <Footer
+            width="95%"
+            padding="15px"
+            children="Search"
+            color="#E07E1B"
+          />
+        </section>
+        <section className="footer-gray"></section>
+      </footer>
     </div>
   );
 }
