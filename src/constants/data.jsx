@@ -118,18 +118,18 @@ import { GiWeightLiftingUp } from "react-icons/gi";
 import { CiCircleMore } from "react-icons/ci";
 
 export const asideData = [
-  { icon: <LuApple />, iconText: " SuperMarket" },
-  { icon: <CgHome />, iconText: "Health & beauty" },
-  { icon: <PiCookingPot />, iconText: "Home & Office" },
-  { icon: <IoIosPhonePortrait />, iconText: "Appliencies" },
-  { icon: <CiMonitor />, iconText: "Phones & Tablet" },
-  { icon: <PiTelevisionSimpleLight />, iconText: "Computing" },
-  { icon: <FaShirt />, iconText: "Electronics" },
-  { icon: <IoGameControllerOutline />, iconText: "Fashion" },
-  { icon: <LuApple />, iconText: "Baby Products" },
-  { icon: <IoGameControllerOutline />, iconText: "Gaming" },
-  { icon: <GiWeightLiftingUp />, iconText: "Sporting Goods" },
-  { icon: <CiCircleMore />, iconText: "Other Categories" },
+  { id: 1, icon: <LuApple />, iconText: " SuperMarket" },
+  { id: 2, icon: <CgHome />, iconText: "Health & beauty" },
+  { id: 3, icon: <PiCookingPot />, iconText: "Home & Office" },
+  { id: 4, icon: <IoIosPhonePortrait />, iconText: "Appliencies" },
+  { id: 5, icon: <CiMonitor />, iconText: "Phones & Tablet" },
+  { id: 6, icon: <PiTelevisionSimpleLight />, iconText: "Computing" },
+  { id: 7, icon: <IoGameControllerOutline />, iconText: "Electronics" },
+  { id: 8, icon: <FaShirt />, iconText: "Fashion" },
+  { id: 9, icon: <LuApple />, iconText: "Baby Products" },
+  { id: 10, icon: <IoGameControllerOutline />, iconText: "Gaming" },
+  { id: 11, icon: <GiWeightLiftingUp />, iconText: "Sporting Goods" },
+  { id: 12, icon: <CiCircleMore />, iconText: "Other Categories" },
 ];
 
 export const asideTwoData = [

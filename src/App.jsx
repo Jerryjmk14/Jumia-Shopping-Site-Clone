@@ -20,16 +20,17 @@ import { clearanceSales } from "./constants/data";
 import Footer from "./components/Footer";
 import AsideTwo from "./components/AsideTwo";
 import Carousel from "./components/Carousel";
+import FlashSales from "./components/FlashSales";
 
 export default function App() {
   return (
-    <div className="container">
+    <div className="wrapper" style={{}}>
       <NavBar>
-        {/* This is the top logo banna */}
+        {/* This is the top logo navbar */}
         <Logo src={navImage} alt="NavImage" width="90%" />
 
-        {/* This is the second banna*/}
-        <ul>
+        {/* This is the second navbar*/}
+        <ul style={{ marginBottom: "0px" }}>
           <li>
             <Logo src={star} alt="star" width="15px" />
             <span className="nav-span">Sell on Jumia</span>
@@ -44,7 +45,7 @@ export default function App() {
           </li>
         </ul>
 
-        {/* This is the third banna with Search Bar */}
+        {/* This is the third navbar with Search Bar */}
         <SearchBar>
           <Logo src={logo} alt="logo" width="160px" />
 
@@ -93,34 +94,33 @@ export default function App() {
 
       {/* This is the main body */}
       <main className="main-body">
-        <div className="flashsales">
-          {clearanceSales.map(({ pic, id, name }) => {
-            return (
-              <div key={id} style={{ width: "15%", margin: "0 auto" }}>
-                <img src={pic} alt={name} />
-                <p>{name}</p>
-              </div>
-            );
-          })}
-        </div>
+        <FlashSales />
 
         {allPictures.map(({ id, category, data }) => {
-          return <Main key={id} category={category} data={data} />;
+          return <Main id={id} category={category} data={data} key={id} />;
         })}
       </main>
 
       {/* This is the Footer */}
       <footer className="footer">
         <section className="footer-dark">
-          <Logo src={logo} alt="logo" width="160px" color="white" />
-          <Footer
+          <Logo
+            src={logo}
+            alt="logo"
+            width="160px"
+            color="white"
+            padding="20px"
+          />
+          <SearchInput
             width="95%"
             padding="15px"
             children="Search"
             color="#E07E1B"
           />
         </section>
-        <section className="footer-gray"></section>
+        <section className="footer-gray">
+          <Footer />
+        </section>
       </footer>
     </div>
   );
